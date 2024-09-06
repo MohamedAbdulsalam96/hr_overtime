@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-17 12:48:25.036838",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "biometric_id",
+  "time",
+  "traceback",
+  "employee"
+ ],
+ "fields": [
+  {
+   "fieldname": "biometric_id",
+   "fieldtype": "Data",
+   "label": "Biometric ID"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "traceback",
+   "fieldtype": "Text Editor",
+   "label": "Traceback"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-05 22:54:26.149744",
+ "modified_by": "Administrator",
+ "module": "HR Overtime",
+ "name": "Biometric Error Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

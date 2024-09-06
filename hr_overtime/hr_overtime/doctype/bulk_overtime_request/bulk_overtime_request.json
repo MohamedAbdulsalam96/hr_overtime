@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "creation": "2024-05-16 10:49:37.898828",
+ "description": "Use this request form to create overtime request in bulk.",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_filter_section",
+  "filter_contact",
+  "section_break_huli",
+  "notes",
+  "column_break_sgse",
+  "overtime_request_date",
+  "auto_submit_ot_requests",
+  "request_type",
+  "section_break_jgwj",
+  "fetch",
+  "employee_overtime_hours"
+ ],
+ "fields": [
+  {
+   "fieldname": "filter_contact",
+   "fieldtype": "Code",
+   "label": "Filter Contact"
+  },
+  {
+   "fieldname": "fetch",
+   "fieldtype": "Button",
+   "label": "Fetch"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "employee_overtime_hours",
+   "fieldtype": "Table",
+   "label": "Employee Overtime Hours",
+   "options": "Overtime Request Table"
+  },
+  {
+   "fieldname": "section_break_huli",
+   "fieldtype": "Section Break",
+   "label": "OT Details"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Notes",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_sgse",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overtime_request_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Overtime Request Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_jgwj",
+   "fieldtype": "Section Break",
+   "label": "Employee List"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_submit_ot_requests",
+   "fieldtype": "Check",
+   "label": "Auto Submit OT Requests"
+  },
+  {
+   "fieldname": "employee_filter_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Filter"
+  },
+  {
+   "fieldname": "request_type",
+   "fieldtype": "Select",
+   "label": "Request Type",
+   "options": "\nEmergency\nSchedule",
+   "reqd": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-09-05 22:48:05.861151",
+ "modified_by": "Administrator",
+ "module": "HR Overtime",
+ "name": "Bulk Overtime Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

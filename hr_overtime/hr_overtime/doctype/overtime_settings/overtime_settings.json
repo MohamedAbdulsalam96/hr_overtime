@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-18 17:53:43.522665",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ot_settings_section",
+  "enable",
+  "apply_ot_on_holiday",
+  "column_break_nato",
+  "actual_max_allowed_ot",
+  "max_allowed_ot",
+  "section_break_jkjp",
+  "last_sync_date",
+  "column_break_tcyp",
+  "submit_auto_created_ot_request",
+  "holidays_section",
+  "last_sync_date_holday",
+  "column_break_zrcv",
+  "submit_auto_created_ot_request_holiday"
+ ],
+ "fields": [
+  {
+   "fieldname": "ot_settings_section",
+   "fieldtype": "Section Break",
+   "label": "OT Settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable",
+   "fieldtype": "Check",
+   "label": "Auto Create OT"
+  },
+  {
+   "default": "0",
+   "fieldname": "apply_ot_on_holiday",
+   "fieldtype": "Check",
+   "label": "Apply OT on Holiday"
+  },
+  {
+   "fieldname": "column_break_nato",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "In a month (set 0 if not applicable)",
+   "fieldname": "actual_max_allowed_ot",
+   "fieldtype": "Float",
+   "label": "Actual Max. Allowed OT"
+  },
+  {
+   "description": "In a month (set 0 if not applicable)",
+   "fieldname": "max_allowed_ot",
+   "fieldtype": "Float",
+   "label": "Show Max. Allowed OT"
+  },
+  {
+   "fieldname": "section_break_jkjp",
+   "fieldtype": "Section Break",
+   "label": "Working Days"
+  },
+  {
+   "depends_on": "eval:doc.enable==1",
+   "fieldname": "last_sync_date",
+   "fieldtype": "Date",
+   "label": "Last Sync Date (Regular)",
+   "mandatory_depends_on": "eval:doc.enable==1"
+  },
+  {
+   "fieldname": "column_break_tcyp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.enable==1",
+   "fieldname": "submit_auto_created_ot_request",
+   "fieldtype": "Select",
+   "label": "Submit Auto Created OT Request (Regular)",
+   "options": "Yes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.apply_ot_on_holiday==1",
+   "fieldname": "holidays_section",
+   "fieldtype": "Section Break",
+   "label": "Holidays"
+  },
+  {
+   "depends_on": "eval:doc.apply_ot_on_holiday==1",
+   "fieldname": "last_sync_date_holday",
+   "fieldtype": "Date",
+   "label": "Last Sync Date (Holday)",
+   "mandatory_depends_on": "eval:doc.apply_ot_on_holiday==1"
+  },
+  {
+   "fieldname": "column_break_zrcv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.apply_ot_on_holiday==1",
+   "fieldname": "submit_auto_created_ot_request_holiday",
+   "fieldtype": "Select",
+   "label": "Submit Auto Created OT Request (Holiday)",
+   "options": "Yes\nNo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-09-05 22:52:43.164619",
+ "modified_by": "Administrator",
+ "module": "HR Overtime",
+ "name": "Overtime Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -122,21 +122,25 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Salary Slip": {
+		"before_save": "hr_overtime.salary_slip.overtime",
+#		"on_cancel": "method",
+#		"on_trash": "method"
+	},
+}
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"hr_overtime.tasks.all"
 # 	],
+	"daily_long": [
+		"hr_overtime.employee.new_generate_overtime_request",
+		"hr_overtime.employee.overtime_request_on_holiday"
+	],
 # 	"daily": [
 # 		"hr_overtime.tasks.daily"
 # 	],
@@ -149,7 +153,7 @@ app_license = "mit"
 # 	"monthly": [
 # 		"hr_overtime.tasks.monthly"
 # 	],
-# }
+}
 
 # Testing
 # -------
